@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.env
+
+# Claude / local agent config
+.claude/
+
+# SQLite databases
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite-journal
+*.tmp*
+
+# Raw / generated data
+ncbi_monitor/raw/
+sourmash_out/
+rssc_export/
+
+# Backups / archives
+app_archive/
+pages.bak/
+ui_v2_backup/
+*.bak
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Research data - keep local
+ani_name_map.tsv
+ani_pairs.tsv
+strain_metadata.tsv
+
+# V3 build intermediate files
+db/v3_build/

@@ -52,7 +52,7 @@ def get_write_conn():
 
 PAGES = [
     "Overview", "Strain Browser", "Genome QC",
-    "Metadata", "Typing", "Phenotypes",
+    "Metadata", "Typing", "Phylogeny", "Phenotypes",
     "BioProjects", "Literature",
     "Manual Curation", "Export Data",
 ]
@@ -63,14 +63,14 @@ st.sidebar.caption(f"Database: `{DB_PATH}`")
 st.sidebar.caption(f"Samples: {scalar('SELECT COUNT(*) FROM samples')}")
 
 from views import overview, strain_browser, genome_qc
-from views import metadata, typing, phenotypes
+from views import metadata, typing, phylogeny, phenotypes
 from views import bioprojects, literature
 from views import manual_curation, export_data
 
 _map = {
     "Overview": overview, "Strain Browser": strain_browser,
     "Genome QC": genome_qc, "Metadata": metadata,
-    "Typing": typing, "Phenotypes": phenotypes,
+    "Typing": typing, "Phylogeny": phylogeny, "Phenotypes": phenotypes,
     "BioProjects": bioprojects, "Literature": literature,
     "Manual Curation": manual_curation, "Export Data": export_data,
 }
